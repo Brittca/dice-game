@@ -2,29 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
-      rel="stylesheet"
-    />
-    <link
-      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="style.css" />
-
     <title>Pig Game</title>
   </head>
 
   <body>
-    <!-- <div class="game-rules">
-      <p>- The game has 2 players, playing in rounds</p>
-      <p>- In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score</p>
-      <p>- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</p>
-      <p>- The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn</p>
-      <p>- The first player to reach 100 points on GLOBAL score wins the game</p>
-    </div> -->
+   
     <div class="wrapper clearfix">
+        <div class="game-rules">
+            <h2>Rules:</h2>
+              <p> &#8674 &nbsp; The game has 2 players, playing in rounds.</p>
+              <p> &#8674 &nbsp; In each turn, a player rolls a dice as many times as they wish. Each result gets added to their ROUND score.</p>
+              <p> &#8674 &nbsp; If the player rolls a 1, all their ROUND score is lost. It is then the next players turn.</p>
+              <p> &#8674 &nbsp; The player can 'Hold' and add their ROUND score to the TOTAL score at any time. After holding, it's the next player's turn.</p>
+              <p> &#8674 &nbsp; The first player to reach 100 points on the TOTAL score wins the game, or set your FINAL SCORE below.</p>
+            </div>
       <div class="player-0-panel active">
         <div class="player-name" id="name-0">Player 1</div>
         <div class="player-score" id="score-0">0</div>
@@ -44,15 +38,20 @@
       </div>
 
       <button class="btn-new">
-        <i class="ion-ios-plus-outline"></i>New game
+        <i class="far fa-plus-square"></i>New game
       </button>
-      <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+      <button class="btn-roll"><i class="fas fa-sync-alt"></i>Roll dice</button>
       <button class="btn-hold">
-        <i class="ion-ios-download-outline"></i>Hold
+        <i class="fas fa-chevron-circle-down"></i>Hold
       </button>
 
+      <input type="text" placeholder="Final Score" class="final-score">
+
       <img src="dice-5.png" alt="Dice" class="dice" />
+      
     </div>
+
+    
 
     <script src="app.js"></script>
   </body>

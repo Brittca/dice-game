@@ -42,13 +42,22 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 
         // Update the UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+        // read the input that the user specified for the winning score
+        var input = document.querySelector('.final-score').value;
+        var winningScore;
+
+        if(input) {
+            winningScore = input;
+        } else {
+            winningScore = 100;
+        }
 
         // Check if player won the game
-        if (scores[activePlayer] >= 100) {
+        if (scores[activePlayer] >= winningScore) {
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
-            document.querySelector('.player-' +activePlayer + '-panel').classList.add('winner'); 
-            document.querySelector('.player-' +activePlayer + '-panel').classList.remove('active');
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner'); 
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
         } else  {
             // Next player
@@ -72,7 +81,7 @@ function nextPlayer() {
     //document.querySelector('.player-0-panel').classList.remove('active');
     //document.querySelector('.player-1-panel').classList.add('active');
 
-    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice').style.display = 'none'; // makes dice 1 invisible when player changes
 }
 
 document.querySelector('.btn-new').addEventListener('click', init);

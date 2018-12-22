@@ -18,24 +18,30 @@ body {
     background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
     background-size: cover;
     background-position: center;
-    font-family: Lato;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     position: relative;
     height: 100vh;
     color: #555;
 }
 
-/* .game-rules {
-    text-align: left;
-    width: 200px;
-    color: #fff;
-    background-color: #666;
-    opacity: .8;
-    font-family: Lato;
-    font-weight: 400;
-    line-height: 1.6;
-} */
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 13px;
+}
 
+.game-rules {
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(53, 53, 53, 0.9), rgba(20, 20, 20, 0.9)), url(topback.jpg);
+    padding: 30px;
+}
+
+p {
+    padding: 3px;
+    font-size: 15px;
+}
 
 .wrapper {
     width: 1000px;
@@ -81,8 +87,8 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
-.active .player-name { font-weight: 300; }
+.active { background-color: #f3f3f3; }
+.active .player-name { font-weight: 500}
 
 .active .player-name::after {
     content: "\2022";
@@ -107,6 +113,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 12px;
+    font-weight: 500;
     color: #222;
 }
 
@@ -122,18 +129,39 @@ button {
     color: #555;
     background: none;
     border: none;
-    font-family: Lato;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 400;
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover { font-weight: 400; }
+button:hover { font-weight: 500; }
 button:hover i { margin-right: 20px; }
 
 button:focus {
+    outline: none;
+}
+
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 755px;
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    border: 1px solid #888;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.final-score:focus {
     outline: none;
 }
 
@@ -144,18 +172,19 @@ i {
     font-size: 32px;
     line-height: 1;
     vertical-align: text-top;
-    margin-top: -4px;
+    margin-top: -2px;
+    font-size: 28px;
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+.btn-new { top: 265px;}
+.btn-roll { top: 629px;}
+.btn-hold { top: 693px;}
 
 .dice {
     position: absolute;
     left: 50%;
-    top: 178px;
+    top: 402px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
